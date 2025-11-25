@@ -20,7 +20,11 @@ func main() {
 		}
 		var f = tempconv.Fahrenheit(t)
 		var c = tempconv.Celsius(t)
+		var k = tempconv.Kelvin(t)
 
-		fmt.Printf("%s = %s\n%s = %s\n", c, tempconv.CToF(c), f, tempconv.FToC(f))
+		fmt.Printf("%s = %s\n%s = %s\n%s = %s\n%s = %s\n%s = %s\n%s = %s\n",
+			c, tempconv.CToF(c), c, tempconv.CToK(c),
+			f, tempconv.FToK(f), f, tempconv.FToC(f),
+			k, tempconv.KToC(k), k, tempconv.KToF(k))
 	}
 }
