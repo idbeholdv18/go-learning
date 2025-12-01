@@ -33,7 +33,7 @@ type User struct {
 
 func SearchIssues(terms []string) (*IssuesSearchResult, error) {
 	q := url.QueryEscape(strings.Join(terms, " "))
-	resp, err := http.Get(IssueURL + "?q=" + q)
+	resp, err := http.Get(IssueURL + "?q:" + q)
 
 	if err != nil {
 		return nil, err
